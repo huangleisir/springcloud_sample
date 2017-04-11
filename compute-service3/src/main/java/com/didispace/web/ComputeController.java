@@ -22,7 +22,7 @@ public class ComputeController {
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a + b;
         logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
-        return "3333333333:"+r;
+        return "service-A, result="+r+", node333333333333333";
     }
 
 }

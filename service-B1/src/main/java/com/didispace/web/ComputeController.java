@@ -17,12 +17,11 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/add" ,method = RequestMethod.GET)
-    public String add(@RequestParam Integer a, @RequestParam Integer b) {
+    @RequestMapping(value = "/select" ,method = RequestMethod.GET)
+    public String select() {
         ServiceInstance instance = client.getLocalServiceInstance();
-        Integer r = a + b;
-        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
-        return "service-A, result="+r+", node222222222222222";
+        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
+        return "service-B, node11111111111111111111";
     }
 
 }
