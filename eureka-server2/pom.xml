@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.didispace</groupId>
-	<artifactId>api-gateway</artifactId>
+	<artifactId>eureka-server2</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>api-gateway</name>
+	<name>eureka-server2</name>
 	<description>Spring Cloud project</description>
 
 	<parent>
@@ -26,13 +26,14 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zuul</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 
 	</dependencies>
