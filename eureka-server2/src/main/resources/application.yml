@@ -24,7 +24,7 @@ eureka:
     hostname: peer1
   client:
     serviceUrl:
-      defaultZone: http://localhost:1112/eureka/
+      defaultZone: http://localhost:1112/eureka/,http://localhost:1113/eureka/
 ---
 spring:
     profiles: peer2
@@ -35,4 +35,15 @@ eureka:
     hostname: peer2
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1113/eureka/
+---
+spring:
+    profiles: peer3
+server:
+  port: 1113
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
